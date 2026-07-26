@@ -4,6 +4,5 @@ FROM ghcr.io/shadichy/cachyos-ci:latest
 RUN pacman -Sy --noconfirm 7zip
 
 # Cleanup
-RUN rm -rf makeapex apex-install
-RUN yes | paru -Scc
+RUN yes | pacman -Scc
 RUN rm -rf .cache /var/cache/pacman/pkg/*
