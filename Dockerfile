@@ -1,7 +1,7 @@
 FROM ghcr.io/shadichy/cachyos-ci:latest
 
 # Install paru and sudo
-RUN pacman -Sy --noconfirm 7zip android-tools e2fsprogs paru sudo
+RUN pacman -Sy --noconfirm 7zip android-tools android-sdk-build-tools e2fsprogs paru sudo
 
 # Cleanup
 RUN yes | pacman -Scc
